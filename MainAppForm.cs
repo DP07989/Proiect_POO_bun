@@ -15,6 +15,7 @@ namespace Proiect_POO_bun
         public MainAppForm()
         {
             InitializeComponent();
+            AccesLevelLabel.Text = "Acces Level: " + Globals.AccesLevel;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

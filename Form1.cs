@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Proiect_POO_bun
 {
@@ -79,10 +81,56 @@ namespace Proiect_POO_bun
 
         private void submitUserButton_MouseClick(object sender, MouseEventArgs e)
         {
-            MainAppForm mainAppForm = new MainAppForm();
-            this.Hide(); 
-            mainAppForm.ShowDialog(); 
-            this.Close(); 
+            try
+            {
+                MySqlConnection con = new MySqlConnection("server  = localhost; userid = root; password = ; database = poo");
+                con.Open();
+
+                string query = "SELECT * FROM users WHERE Name = @username AND PassHash = @password";
+                MySqlCommand cmd = new MySqlCommand(query, con);
+
+                cmd.Parameters.AddWithValue("@username", userBox.Text);
+                cmd.Parameters.AddWithValue("@password", passwordBox.Text);
+
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                if (rdr.HasRows)
+                {
+
+                    while (rdr.Read())
+                    {
+                        Globals.AccesLevel = Convert.ToInt16(rdr["AL"]);
+                    }
+
+                    rdr.Close();
+
+                    MainAppForm mainAppForm = new MainAppForm();
+                    this.Hide();
+                    mainAppForm.ShowDialog();
+                    this.Close();
+                    Globals.AccesLevel = Convert.ToInt16(rdr["AL"]);
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password.","Failed Login", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+
+              
+            
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Could not verify user", "Database Connection Failure", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+
+            
         }
     }
 }
