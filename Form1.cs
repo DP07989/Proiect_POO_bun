@@ -76,5 +76,13 @@ namespace Proiect_POO_bun
                 if(passwordBox.Text !="Password...")
                 passwordBox.PasswordChar = '*';
         }
+
+        private void submitUserButton_MouseClick(object sender, MouseEventArgs e)
+        {
+            MainAppForm mainAppForm = new MainAppForm();
+            this.Hide(); 
+            mainAppForm.ShowDialog(); 
+            this.Close(); 
+        }
     }
 }
