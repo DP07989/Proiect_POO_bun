@@ -34,12 +34,22 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.Programe = new System.Windows.Forms.ToolStripButton();
+            this.ModifyDatabase = new System.Windows.Forms.ToolStrip();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MainPanel.SuspendLayout();
             this.MainToolStrip.SuspendLayout();
+            this.ModifyDatabase.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // MainPanel
             // 
+            this.MainPanel.Controls.Add(this.panel1);
             this.MainPanel.Controls.Add(this.MainToolStrip);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
@@ -51,6 +61,7 @@
             // 
             this.MainToolStrip.AllowMerge = false;
             this.MainToolStrip.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.MainToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton2,
@@ -98,6 +109,76 @@
             this.Programe.Text = "Programe";
             this.Programe.ToolTipText = "Programe";
             // 
+            // ModifyDatabase
+            // 
+            this.ModifyDatabase.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ModifyDatabase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ModifyDatabase.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ModifyDatabase.Font = new System.Drawing.Font("UT Sans Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModifyDatabase.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.ModifyDatabase.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.ModifyDatabase.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripButton5});
+            this.ModifyDatabase.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.ModifyDatabase.Location = new System.Drawing.Point(0, 0);
+            this.ModifyDatabase.Name = "ModifyDatabase";
+            this.ModifyDatabase.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ModifyDatabase.Size = new System.Drawing.Size(102, 406);
+            this.ModifyDatabase.TabIndex = 1;
+            this.ModifyDatabase.Text = "toolStrip1";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.ModifyDatabase);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 44);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 406);
+            this.panel1.TabIndex = 2;
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton3.ForeColor = System.Drawing.Color.Black;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(99, 39);
+            this.toolStripButton3.Text = "Adaugă";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(99, 39);
+            this.toolStripButton4.Text = "Șterge";
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(99, 39);
+            this.toolStripButton5.Text = "Modifică";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(102, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(698, 406);
+            this.dataGridView1.TabIndex = 2;
+            // 
             // MainAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -110,6 +191,11 @@
             this.MainPanel.PerformLayout();
             this.MainToolStrip.ResumeLayout(false);
             this.MainToolStrip.PerformLayout();
+            this.ModifyDatabase.ResumeLayout(false);
+            this.ModifyDatabase.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,5 +207,11 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton Programe;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStrip ModifyDatabase;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
