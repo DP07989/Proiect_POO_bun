@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainAppForm));
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.AccesLevelLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGrid = new System.Windows.Forms.DataGridView();
             this.ModifyDatabase = new System.Windows.Forms.ToolStrip();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
@@ -39,11 +40,11 @@
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.Programe = new System.Windows.Forms.ToolStripButton();
-            this.AccesLevelLabel = new System.Windows.Forms.Label();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.Users = new System.Windows.Forms.ToolStripButton();
             this.MainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.ModifyDatabase.SuspendLayout();
             this.MainToolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -59,10 +60,21 @@
             this.MainPanel.Size = new System.Drawing.Size(800, 450);
             this.MainPanel.TabIndex = 0;
             // 
+            // AccesLevelLabel
+            // 
+            this.AccesLevelLabel.AutoSize = true;
+            this.AccesLevelLabel.Font = new System.Drawing.Font("UT Sans Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccesLevelLabel.Location = new System.Drawing.Point(-6, -5);
+            this.AccesLevelLabel.Name = "AccesLevelLabel";
+            this.AccesLevelLabel.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.AccesLevelLabel.Size = new System.Drawing.Size(131, 37);
+            this.AccesLevelLabel.TabIndex = 3;
+            this.AccesLevelLabel.Text = "Acces Level: 0";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGrid);
             this.panel1.Controls.Add(this.ModifyDatabase);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 44);
@@ -70,16 +82,16 @@
             this.panel1.Size = new System.Drawing.Size(800, 406);
             this.panel1.TabIndex = 2;
             // 
-            // dataGridView1
+            // dataGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(102, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(698, 406);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGrid.Location = new System.Drawing.Point(102, 0);
+            this.dataGrid.Name = "dataGrid";
+            this.dataGrid.RowHeadersWidth = 51;
+            this.dataGrid.RowTemplate.Height = 24;
+            this.dataGrid.Size = new System.Drawing.Size(698, 406);
+            this.dataGrid.TabIndex = 2;
             // 
             // ModifyDatabase
             // 
@@ -110,6 +122,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(99, 39);
             this.toolStripButton3.Text = "Adaugă";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 
@@ -119,6 +132,7 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(99, 39);
             this.toolStripButton4.Text = "Șterge";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripButton5
             // 
@@ -128,6 +142,7 @@
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(99, 39);
             this.toolStripButton5.Text = "Modifică";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // MainToolStrip
             // 
@@ -138,7 +153,8 @@
             this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton2,
             this.toolStripButton1,
-            this.Programe});
+            this.toolStripButton6,
+            this.Users});
             this.MainToolStrip.Location = new System.Drawing.Point(0, 0);
             this.MainToolStrip.Name = "MainToolStrip";
             this.MainToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -169,28 +185,30 @@
             this.toolStripButton1.Size = new System.Drawing.Size(102, 41);
             this.toolStripButton1.Text = "Studenți";
             // 
-            // Programe
+            // toolStripButton6
             // 
-            this.Programe.CheckOnClick = true;
-            this.Programe.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.Programe.Font = new System.Drawing.Font("UT Sans Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Programe.Image = ((System.Drawing.Image)(resources.GetObject("Programe.Image")));
-            this.Programe.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Programe.Name = "Programe";
-            this.Programe.Size = new System.Drawing.Size(116, 41);
-            this.Programe.Text = "Programe";
-            this.Programe.ToolTipText = "Programe";
+            this.toolStripButton6.CheckOnClick = true;
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton6.Font = new System.Drawing.Font("UT Sans Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(116, 41);
+            this.toolStripButton6.Text = "Programe";
+            this.toolStripButton6.ToolTipText = "Programe";
             // 
-            // AccesLevelLabel
+            // Users
             // 
-            this.AccesLevelLabel.AutoSize = true;
-            this.AccesLevelLabel.Font = new System.Drawing.Font("UT Sans Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccesLevelLabel.Location = new System.Drawing.Point(-6, -5);
-            this.AccesLevelLabel.Name = "AccesLevelLabel";
-            this.AccesLevelLabel.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.AccesLevelLabel.Size = new System.Drawing.Size(131, 37);
-            this.AccesLevelLabel.TabIndex = 3;
-            this.AccesLevelLabel.Text = "Acces Level: 0";
+            this.Users.CheckOnClick = true;
+            this.Users.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.Users.Font = new System.Drawing.Font("UT Sans Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Users.Image = ((System.Drawing.Image)(resources.GetObject("Users.Image")));
+            this.Users.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Users.Name = "Users";
+            this.Users.Size = new System.Drawing.Size(116, 41);
+            this.Users.Text = "Utilizatori";
+            this.Users.ToolTipText = "Programe";
+            this.Users.Click += new System.EventHandler(this.Users_Click);
             // 
             // MainAppForm
             // 
@@ -205,7 +223,7 @@
             this.MainPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ModifyDatabase.ResumeLayout(false);
             this.ModifyDatabase.PerformLayout();
             this.MainToolStrip.ResumeLayout(false);
@@ -220,13 +238,14 @@
         private System.Windows.Forms.ToolStrip MainToolStrip;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton Programe;
+        private System.Windows.Forms.ToolStripButton Users;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStrip ModifyDatabase;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.Label AccesLevelLabel;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
     }
 }

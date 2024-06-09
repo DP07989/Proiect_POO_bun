@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,14 @@ namespace Proiect_POO_bun
 {
     public partial class MainAppForm : Form
     {
+        string SelectedTable;
+
         public MainAppForm()
         {
             InitializeComponent();
             AccesLevelLabel.Text = "Acces Level: " + Globals.AccesLevel;
+            this.SelectedTable = "studenti";
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -31,6 +36,54 @@ namespace Proiect_POO_bun
         private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Users_Click(object sender, EventArgs e)
+        {
+            SelectedTable = "users";
+
+            MySqlConnection con = new MySqlConnection("server  = localhost; userid = root; password = ; database = poo");
+            con.Open();
+
+            string Query = "SELECT * FROM users";
+            MySqlCommand cmd = new MySqlCommand(Query,con);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            //insert here
+
+            // Create a new DataTable.
+            DataTable dt = new DataTable();
+
+            // Load the data from the reader into the DataTable.
+            dt.Load(reader);
+
+            // Bind the DataTable to the DataGridView.
+            dataGrid.DataSource = dt;
+
+            // Close the reader and the connection.
+            reader.Close();
+            con.Close();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)//Adauga Intrate
+        {
+            if (SelectedTable == "users")
+            { 
+                UserForm userForm = new UserForm();
+                userForm.ShowDialog();
+            }
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            DeleteUserForm deleteUserForm = new DeleteUserForm();
+            deleteUserForm.ShowDialog();
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            ModifyUser modifyUser = new ModifyUser();
+            modifyUser.ShowDialog();
         }
     }
 }
