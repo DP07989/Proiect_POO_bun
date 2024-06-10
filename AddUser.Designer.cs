@@ -31,8 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyUser));
             this.ExecuteQueryButton = new System.Windows.Forms.Button();
             this.Titlu = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ALTextBox = new System.Windows.Forms.TextBox();
             this.PassTextBox = new System.Windows.Forms.TextBox();
             this.NumeTextBox = new System.Windows.Forms.TextBox();
             this.IDlabel = new System.Windows.Forms.Label();
@@ -41,7 +43,7 @@
             // 
             // ExecuteQueryButton
             // 
-            this.ExecuteQueryButton.Location = new System.Drawing.Point(128, 172);
+            this.ExecuteQueryButton.Location = new System.Drawing.Point(122, 220);
             this.ExecuteQueryButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ExecuteQueryButton.Name = "ExecuteQueryButton";
             this.ExecuteQueryButton.Size = new System.Drawing.Size(45, 36);
@@ -55,12 +57,21 @@
             this.Titlu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Titlu.AutoSize = true;
             this.Titlu.Font = new System.Drawing.Font("UT Sans Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Titlu.Location = new System.Drawing.Point(98, 9);
+            this.Titlu.Location = new System.Drawing.Point(49, 11);
             this.Titlu.Name = "Titlu";
-            this.Titlu.Size = new System.Drawing.Size(127, 26);
+            this.Titlu.Size = new System.Drawing.Size(230, 26);
             this.Titlu.TabIndex = 14;
-            this.Titlu.Text = "Adauga student";
-            this.Titlu.Click += new System.EventHandler(this.Titlu_Click);
+            this.Titlu.Text = "Modificați datele utilizatorului";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("UT Sans Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(16, 179);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Nivel Acces";
             // 
             // label2
             // 
@@ -81,6 +92,14 @@
             this.label1.Size = new System.Drawing.Size(43, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "Nume";
+            // 
+            // ALTextBox
+            // 
+            this.ALTextBox.Location = new System.Drawing.Point(78, 179);
+            this.ALTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.ALTextBox.Name = "ALTextBox";
+            this.ALTextBox.Size = new System.Drawing.Size(210, 27);
+            this.ALTextBox.TabIndex = 10;
             // 
             // PassTextBox
             // 
@@ -125,8 +144,10 @@
             this.Controls.Add(this.IDtextBox);
             this.Controls.Add(this.ExecuteQueryButton);
             this.Controls.Add(this.Titlu);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.ALTextBox);
             this.Controls.Add(this.PassTextBox);
             this.Controls.Add(this.NumeTextBox);
             this.Font = new System.Drawing.Font("UT Sans Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,8 +156,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "ModifyUser";
-            this.Text = "Adaugare";
-            this.Load += new System.EventHandler(this.ModifyUser_Load);
+            this.Text = "Modificare Utilizator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,8 +166,10 @@
 
         private System.Windows.Forms.Button ExecuteQueryButton;
         private System.Windows.Forms.Label Titlu;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox ALTextBox;
         private System.Windows.Forms.TextBox PassTextBox;
         private System.Windows.Forms.TextBox NumeTextBox;
         private System.Windows.Forms.Label IDlabel;

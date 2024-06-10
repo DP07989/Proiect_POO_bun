@@ -39,7 +39,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("UT Sans Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 11);
+            this.label1.Location = new System.Drawing.Point(57, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 31);
             this.label1.TabIndex = 0;
@@ -49,19 +49,19 @@
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox1.Location = new System.Drawing.Point(57, 54);
+            this.textBox1.Location = new System.Drawing.Point(82, 62);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(88, 27);
+            this.textBox1.Size = new System.Drawing.Size(126, 27);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button1.Location = new System.Drawing.Point(68, 89);
+            this.button1.Location = new System.Drawing.Point(108, 97);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 29);
+            this.button1.Size = new System.Drawing.Size(66, 39);
             this.button1.TabIndex = 2;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
@@ -72,7 +72,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(208, 135);
+            this.ClientSize = new System.Drawing.Size(292, 169);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);

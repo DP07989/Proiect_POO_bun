@@ -49,15 +49,5 @@ namespace Proiect_POO_bun
                 this.Close();
             }
         }
-
-        private void ModifyUser_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Titlu_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

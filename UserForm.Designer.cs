@@ -41,7 +41,7 @@
             // 
             // NumeTextBox
             // 
-            this.NumeTextBox.Location = new System.Drawing.Point(80, 45);
+            this.NumeTextBox.Location = new System.Drawing.Point(88, 46);
             this.NumeTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NumeTextBox.Name = "NumeTextBox";
             this.NumeTextBox.Size = new System.Drawing.Size(239, 27);
@@ -49,7 +49,7 @@
             // 
             // PassTextBox
             // 
-            this.PassTextBox.Location = new System.Drawing.Point(80, 80);
+            this.PassTextBox.Location = new System.Drawing.Point(88, 81);
             this.PassTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PassTextBox.Name = "PassTextBox";
             this.PassTextBox.Size = new System.Drawing.Size(239, 27);
@@ -57,7 +57,7 @@
             // 
             // ALTextBox
             // 
-            this.ALTextBox.Location = new System.Drawing.Point(80, 115);
+            this.ALTextBox.Location = new System.Drawing.Point(88, 115);
             this.ALTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ALTextBox.Name = "ALTextBox";
             this.ALTextBox.Size = new System.Drawing.Size(239, 27);
@@ -87,7 +87,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("UT Sans Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 115);
+            this.label3.Location = new System.Drawing.Point(9, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 5;
@@ -98,7 +98,7 @@
             this.Titlu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Titlu.AutoSize = true;
             this.Titlu.Font = new System.Drawing.Font("UT Sans Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Titlu.Location = new System.Drawing.Point(75, 9);
+            this.Titlu.Location = new System.Drawing.Point(85, 9);
             this.Titlu.Name = "Titlu";
             this.Titlu.Size = new System.Drawing.Size(222, 26);
             this.Titlu.TabIndex = 6;
@@ -119,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 210);
+            this.ClientSize = new System.Drawing.Size(348, 235);
             this.Controls.Add(this.ExecuteQueryButton);
             this.Controls.Add(this.Titlu);
             this.Controls.Add(this.label3);
