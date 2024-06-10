@@ -73,6 +73,13 @@ namespace Proiect_POO_bun
                 userForm.ShowDialog();
             }
 
+            if (SelectedTable == "program")
+            {
+                UserForm programForm = new UserForm();
+                programForm.ShowDialog();
+            }
+        }
+
             if (SelectedTable == "materii")
             { 
                 AddMateriiForm addMateriiForm = new AddMateriiForm();
