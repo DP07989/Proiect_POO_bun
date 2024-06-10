@@ -38,7 +38,7 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.MateriiButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.Users = new System.Windows.Forms.ToolStripButton();
@@ -151,7 +151,7 @@
             this.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.MainToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton2,
+            this.MateriiButton,
             this.toolStripButton1,
             this.toolStripButton6,
             this.Users});
@@ -162,17 +162,18 @@
             this.MainToolStrip.TabIndex = 0;
             this.MainToolStrip.Text = "toolStrip1";
             // 
-            // toolStripButton2
+            // MateriiButton
             // 
-            this.toolStripButton2.CheckOnClick = true;
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Font = new System.Drawing.Font("UT Sans Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 2);
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(91, 39);
-            this.toolStripButton2.Text = "Materii";
+            this.MateriiButton.CheckOnClick = true;
+            this.MateriiButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.MateriiButton.Font = new System.Drawing.Font("UT Sans Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MateriiButton.Image = ((System.Drawing.Image)(resources.GetObject("MateriiButton.Image")));
+            this.MateriiButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.MateriiButton.Margin = new System.Windows.Forms.Padding(0, 3, 0, 2);
+            this.MateriiButton.Name = "MateriiButton";
+            this.MateriiButton.Size = new System.Drawing.Size(91, 39);
+            this.MateriiButton.Text = "Materii";
+            this.MateriiButton.Click += new System.EventHandler(this.MateriiButton_Click);
             // 
             // toolStripButton1
             // 
@@ -237,7 +238,7 @@
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.ToolStrip MainToolStrip;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton MateriiButton;
         private System.Windows.Forms.ToolStripButton Users;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStrip ModifyDatabase;

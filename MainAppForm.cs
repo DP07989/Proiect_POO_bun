@@ -72,18 +72,63 @@ namespace Proiect_POO_bun
                 UserForm userForm = new UserForm();
                 userForm.ShowDialog();
             }
+
+            if (SelectedTable == "materii")
+            { 
+                AddMateriiForm addMateriiForm = new AddMateriiForm();
+                addMateriiForm.ShowDialog();
+            }
         }
 
-        private void toolStripButton4_Click(object sender, EventArgs e)
+        private void toolStripButton4_Click(object sender, EventArgs e)//Sterge intrare
         {
-            DeleteUserForm deleteUserForm = new DeleteUserForm();
-            deleteUserForm.ShowDialog();
+            if (SelectedTable == "users")
+            {
+                DeleteUserForm deleteUserForm = new DeleteUserForm();
+                deleteUserForm.ShowDialog();
+            }
+
+            if (SelectedTable == "materii")
+            { }
         }
 
-        private void toolStripButton5_Click(object sender, EventArgs e)
+        private void toolStripButton5_Click(object sender, EventArgs e)//Modifica intrare
         {
-            ModifyUser modifyUser = new ModifyUser();
-            modifyUser.ShowDialog();
+            if (SelectedTable == "users")
+            {
+                ModifyUser modifyUser = new ModifyUser();
+                modifyUser.ShowDialog();
+            }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MateriiButton_Click(object sender, EventArgs e)
+        {
+            SelectedTable = "materii";
+
+
+            MySqlConnection con = new MySqlConnection("server  = localhost; userid = root; password = ; database = poo");
+            con.Open();
+
+            string Query = "SELECT * FROM materii";
+            MySqlCommand cmd = new MySqlCommand(Query, con);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+            
+            dataGrid.DataSource = dt;
+
+
+            reader.Close();
+            con.Close();
+
         }
     }
 }
