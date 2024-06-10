@@ -89,7 +89,10 @@ namespace Proiect_POO_bun
             }
 
             if (SelectedTable == "materii")
-            { }
+            { 
+                StergeMaterie stergeMaterie = new StergeMaterie();
+                stergeMaterie.ShowDialog(); 
+            }
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)//Modifica intrare
@@ -98,6 +101,12 @@ namespace Proiect_POO_bun
             {
                 ModifyUser modifyUser = new ModifyUser();
                 modifyUser.ShowDialog();
+            }
+
+            if (SelectedTable == "materii")
+            {
+                ModificareMaterieForm modificareMaterieForm = new ModificareMaterieForm();
+                modificareMaterieForm.ShowDialog();
             }
         }
 

@@ -123,6 +123,12 @@
     <Compile Include="MainAppForm.Designer.cs">
       <DependentUpon>MainAppForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificareMaterieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificareMaterieForm.Designer.cs">
+      <DependentUpon>ModificareMaterieForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModifyUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainAppForm.resx">
       <DependentUpon>MainAppForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificareMaterieForm.resx">
+      <DependentUpon>ModificareMaterieForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyUser.resx">
       <DependentUpon>ModifyUser.cs</DependentUpon>
