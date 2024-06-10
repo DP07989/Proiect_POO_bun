@@ -132,5 +132,10 @@ namespace Proiect_POO_bun
 
             
         }
+
+        private void Main_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

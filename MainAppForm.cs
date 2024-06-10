@@ -72,6 +72,12 @@ namespace Proiect_POO_bun
                 UserForm userForm = new UserForm();
                 userForm.ShowDialog();
             }
+
+            if (SelectedTable == "program")
+            {
+                UserForm programForm = new UserForm();
+                programForm.ShowDialog();
+            }
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
