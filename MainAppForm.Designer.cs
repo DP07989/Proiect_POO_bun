@@ -34,14 +34,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.ModifyDatabase = new System.Windows.Forms.ToolStrip();
+            this.MainToolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.MainToolStrip = new System.Windows.Forms.ToolStrip();
             this.MateriiButton = new System.Windows.Forms.ToolStripButton();
             this.StudentiButton = new System.Windows.Forms.ToolStripButton();
             this.ProgrameButton = new System.Windows.Forms.ToolStripButton();
             this.Users = new System.Windows.Forms.ToolStripButton();
+            this.Catalog = new System.Windows.Forms.ToolStripButton();
             this.MainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
@@ -86,11 +87,11 @@
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGrid.Location = new System.Drawing.Point(102, 0);
+            this.dataGrid.Location = new System.Drawing.Point(186, 0);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 24;
-            this.dataGrid.Size = new System.Drawing.Size(698, 406);
+            this.dataGrid.Size = new System.Drawing.Size(614, 406);
             this.dataGrid.TabIndex = 2;
             // 
             // ModifyDatabase
@@ -104,45 +105,15 @@
             this.ModifyDatabase.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton3,
             this.toolStripButton4,
-            this.toolStripButton5});
+            this.toolStripButton5,
+            this.Catalog});
             this.ModifyDatabase.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.ModifyDatabase.Location = new System.Drawing.Point(0, 0);
             this.ModifyDatabase.Name = "ModifyDatabase";
             this.ModifyDatabase.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ModifyDatabase.Size = new System.Drawing.Size(102, 406);
+            this.ModifyDatabase.Size = new System.Drawing.Size(186, 406);
             this.ModifyDatabase.TabIndex = 1;
             this.ModifyDatabase.Text = "toolStrip1";
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.ForeColor = System.Drawing.Color.Black;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(99, 39);
-            this.toolStripButton3.Text = "Adaugă";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(99, 39);
-            this.toolStripButton4.Text = "Șterge";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(99, 39);
-            this.toolStripButton5.Text = "Modifică";
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // MainToolStrip
             // 
@@ -161,6 +132,37 @@
             this.MainToolStrip.Size = new System.Drawing.Size(800, 44);
             this.MainToolStrip.TabIndex = 0;
             this.MainToolStrip.Text = "toolStrip1";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton3.ForeColor = System.Drawing.Color.Black;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(183, 39);
+            this.toolStripButton3.Text = "Adaugă";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(183, 39);
+            this.toolStripButton4.Text = "Șterge";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(183, 39);
+            this.toolStripButton5.Text = "Modifică";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // MateriiButton
             // 
@@ -213,6 +215,16 @@
             this.Users.ToolTipText = "Programe";
             this.Users.Click += new System.EventHandler(this.Users_Click);
             // 
+            // Catalog
+            // 
+            this.Catalog.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.Catalog.Image = ((System.Drawing.Image)(resources.GetObject("Catalog.Image")));
+            this.Catalog.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Catalog.Name = "Catalog";
+            this.Catalog.Size = new System.Drawing.Size(183, 39);
+            this.Catalog.Text = "Generare Catalog";
+            this.Catalog.Click += new System.EventHandler(this.Catalog_Click);
+            // 
             // MainAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -250,5 +262,6 @@
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.Label AccesLevelLabel;
         private System.Windows.Forms.ToolStripButton ProgrameButton;
+        private System.Windows.Forms.ToolStripButton Catalog;
     }
 }
