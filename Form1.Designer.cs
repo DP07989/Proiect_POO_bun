@@ -49,11 +49,11 @@
             this.Main_panel.Controls.Add(this.pictureBox1);
             this.Main_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Main_panel.Location = new System.Drawing.Point(0, 0);
-            this.Main_panel.Margin = new System.Windows.Forms.Padding(2);
-            this.Main_panel.MaximumSize = new System.Drawing.Size(375, 406);
-            this.Main_panel.MinimumSize = new System.Drawing.Size(375, 406);
+            this.Main_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Main_panel.MaximumSize = new System.Drawing.Size(500, 500);
+            this.Main_panel.MinimumSize = new System.Drawing.Size(500, 500);
             this.Main_panel.Name = "Main_panel";
-            this.Main_panel.Size = new System.Drawing.Size(375, 406);
+            this.Main_panel.Size = new System.Drawing.Size(500, 500);
             this.Main_panel.TabIndex = 0;
             this.Main_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Main_panel_Paint);
             // 
@@ -67,10 +67,10 @@
             this.showPasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showPasswordCheckBox.Font = new System.Drawing.Font("UT Sans Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showPasswordCheckBox.ForeColor = System.Drawing.Color.White;
-            this.showPasswordCheckBox.Location = new System.Drawing.Point(247, 204);
-            this.showPasswordCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.showPasswordCheckBox.Location = new System.Drawing.Point(329, 251);
+            this.showPasswordCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.showPasswordCheckBox.Name = "showPasswordCheckBox";
-            this.showPasswordCheckBox.Size = new System.Drawing.Size(35, 35);
+            this.showPasswordCheckBox.Size = new System.Drawing.Size(47, 43);
             this.showPasswordCheckBox.TabIndex = 3;
             this.showPasswordCheckBox.UseVisualStyleBackColor = false;
             this.showPasswordCheckBox.CheckedChanged += new System.EventHandler(this.showPasswordCheckBox_CheckedChanged);
@@ -82,10 +82,10 @@
             this.submitUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitUserButton.Font = new System.Drawing.Font("UT Sans Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.submitUserButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.submitUserButton.Location = new System.Drawing.Point(88, 276);
-            this.submitUserButton.Margin = new System.Windows.Forms.Padding(2);
+            this.submitUserButton.Location = new System.Drawing.Point(117, 340);
+            this.submitUserButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.submitUserButton.Name = "submitUserButton";
-            this.submitUserButton.Size = new System.Drawing.Size(194, 39);
+            this.submitUserButton.Size = new System.Drawing.Size(259, 48);
             this.submitUserButton.TabIndex = 0;
             this.submitUserButton.Text = "Login";
             this.submitUserButton.UseVisualStyleBackColor = false;
@@ -94,11 +94,11 @@
             // passwordBox
             // 
             this.passwordBox.Font = new System.Drawing.Font("UT Sans Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordBox.Location = new System.Drawing.Point(88, 204);
-            this.passwordBox.Margin = new System.Windows.Forms.Padding(2);
+            this.passwordBox.Location = new System.Drawing.Point(117, 251);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
-            this.passwordBox.Size = new System.Drawing.Size(162, 35);
+            this.passwordBox.Size = new System.Drawing.Size(215, 42);
             this.passwordBox.TabIndex = 2;
             this.passwordBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.passwordBox.Enter += new System.EventHandler(this.passwordBox_Enter);
@@ -108,10 +108,10 @@
             // 
             this.userBox.BackColor = System.Drawing.SystemColors.Window;
             this.userBox.Font = new System.Drawing.Font("UT Sans Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userBox.Location = new System.Drawing.Point(88, 154);
-            this.userBox.Margin = new System.Windows.Forms.Padding(2);
+            this.userBox.Location = new System.Drawing.Point(117, 190);
+            this.userBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userBox.Name = "userBox";
-            this.userBox.Size = new System.Drawing.Size(194, 35);
+            this.userBox.Size = new System.Drawing.Size(257, 42);
             this.userBox.TabIndex = 1;
             this.userBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.userBox.Enter += new System.EventHandler(this.userBox_Enter);
@@ -123,25 +123,25 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Proiect_POO_bun.Properties.Resources.pfp;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(134, 40);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(179, 49);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(141, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // UniCatalog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proiect_POO_bun.Properties.Resources.background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(359, 366);
+            this.ClientSize = new System.Drawing.Size(479, 450);
             this.Controls.Add(this.Main_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UniCatalog";

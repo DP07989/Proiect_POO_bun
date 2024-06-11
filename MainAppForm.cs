@@ -49,18 +49,18 @@ namespace Proiect_POO_bun
             MySqlCommand cmd = new MySqlCommand(Query,con);
 
             MySqlDataReader reader = cmd.ExecuteReader();
-            //insert here
+           
 
-            // Create a new DataTable.
+           
             DataTable dt = new DataTable();
 
-            // Load the data from the reader into the DataTable.
+            
             dt.Load(reader);
 
-            // Bind the DataTable to the DataGridView.
+           
             dataGrid.DataSource = dt;
 
-            // Close the reader and the connection.
+            
             reader.Close();
             con.Close();
         }
@@ -73,21 +73,30 @@ namespace Proiect_POO_bun
                 userForm.ShowDialog();
             }
 
-            if (SelectedTable == "program")
+            if (SelectedTable == "programe")
             {
-                UserForm programForm = new UserForm();
-                programForm.ShowDialog();
+               AddPrograma addPrograma = new AddPrograma();
+                addPrograma.ShowDialog();
+       
             }
-        }
 
             if (SelectedTable == "materii")
-            { 
+            {
                 AddMateriiForm addMateriiForm = new AddMateriiForm();
                 addMateriiForm.ShowDialog();
             }
+
+            if (SelectedTable == "studenti")
+            {
+                AddStudentForm addStudentForm = new AddStudentForm();
+                addStudentForm.ShowDialog();
+            }
         }
 
-        private void toolStripButton4_Click(object sender, EventArgs e)//Sterge intrare
+    
+
+
+    private void toolStripButton4_Click(object sender, EventArgs e)//Sterge intrare
         {
             if (SelectedTable == "users")
             {
@@ -100,6 +109,20 @@ namespace Proiect_POO_bun
                 StergeMaterie stergeMaterie = new StergeMaterie();
                 stergeMaterie.ShowDialog(); 
             }
+
+            if (SelectedTable == "programe")
+            {
+                StergeProgramaForm stergePrograma = new StergeProgramaForm();
+                stergePrograma.ShowDialog();
+            }
+
+            if (SelectedTable == "studenti")
+            {
+                StergeStudent stergeStudent = new StergeStudent();
+                stergeStudent.ShowDialog();
+            }
+
+
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)//Modifica intrare
@@ -115,6 +138,14 @@ namespace Proiect_POO_bun
                 ModificareMaterieForm modificareMaterieForm = new ModificareMaterieForm();
                 modificareMaterieForm.ShowDialog();
             }
+
+            if (SelectedTable == "programe")
+            {
+                ModificaPrograma modificaPrograma = new ModificaPrograma();
+                modificaPrograma.ShowDialog();
+            }
+
+            
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -145,6 +176,54 @@ namespace Proiect_POO_bun
             reader.Close();
             con.Close();
 
+        }
+
+        private void ProgrameButton_Click(object sender, EventArgs e)
+        {
+            SelectedTable = "programe";
+
+
+            MySqlConnection con = new MySqlConnection("server  = localhost; userid = root; password = ; database = poo");
+            con.Open();
+
+            string Query = "SELECT * FROM programe";
+            MySqlCommand cmd = new MySqlCommand(Query, con);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+
+            dataGrid.DataSource = dt;
+
+
+            reader.Close();
+            con.Close();
+        }
+
+        private void StudentiButton_Click(object sender, EventArgs e)
+        {
+            SelectedTable = "studenti";
+
+
+            MySqlConnection con = new MySqlConnection("server  = localhost; userid = root; password = ; database = poo");
+            con.Open();
+
+            string Query = "SELECT * FROM studenti";
+            MySqlCommand cmd = new MySqlCommand(Query, con);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+
+            dataGrid.DataSource = dt;
+
+
+            reader.Close();
+            con.Close();
         }
     }
 }

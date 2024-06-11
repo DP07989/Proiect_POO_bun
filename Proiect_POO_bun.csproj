@@ -98,11 +98,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdaugareStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdaugareStudent.Designer.cs">
+      <DependentUpon>AdaugareStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddMateriiForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddMateriiForm.Designer.cs">
       <DependentUpon>AddMateriiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPrograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPrograma.Designer.cs">
+      <DependentUpon>AddPrograma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentForm.Designer.cs">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DeleteUserForm.cs">
       <SubType>Form</SubType>
@@ -122,6 +140,18 @@
     </Compile>
     <Compile Include="MainAppForm.Designer.cs">
       <DependentUpon>MainAppForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificaStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificaStudentForm.Designer.cs">
+      <DependentUpon>ModificaStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificaPrograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificaPrograma.Designer.cs">
+      <DependentUpon>ModificaPrograma.cs</DependentUpon>
     </Compile>
     <Compile Include="ModificareMaterieForm.cs">
       <SubType>Form</SubType>
@@ -148,6 +178,18 @@
     <Compile Include="StergeMaterie.Designer.cs">
       <DependentUpon>StergeMaterie.cs</DependentUpon>
     </Compile>
+    <Compile Include="StergeProgramaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StergeProgramaForm.Designer.cs">
+      <DependentUpon>StergeProgramaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StergeStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StergeStudent.Designer.cs">
+      <DependentUpon>StergeStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
@@ -158,6 +200,12 @@
     <EmbeddedResource Include="AddMateriiForm.resx">
       <DependentUpon>AddMateriiForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddPrograma.resx">
+      <DependentUpon>AddPrograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteUserForm.resx">
       <DependentUpon>DeleteUserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +214,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainAppForm.resx">
       <DependentUpon>MainAppForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificaStudentForm.resx">
+      <DependentUpon>ModificaStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificaPrograma.resx">
+      <DependentUpon>ModificaPrograma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificareMaterieForm.resx">
       <DependentUpon>ModificareMaterieForm.cs</DependentUpon>
@@ -185,6 +239,12 @@
     </Compile>
     <EmbeddedResource Include="StergeMaterie.resx">
       <DependentUpon>StergeMaterie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StergeProgramaForm.resx">
+      <DependentUpon>StergeProgramaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StergeStudent.resx">
+      <DependentUpon>StergeStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>

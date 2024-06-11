@@ -39,8 +39,8 @@
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
             this.MateriiButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.StudentiButton = new System.Windows.Forms.ToolStripButton();
+            this.ProgrameButton = new System.Windows.Forms.ToolStripButton();
             this.Users = new System.Windows.Forms.ToolStripButton();
             this.MainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -152,8 +152,8 @@
             this.MainToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MateriiButton,
-            this.toolStripButton1,
-            this.toolStripButton6,
+            this.StudentiButton,
+            this.ProgrameButton,
             this.Users});
             this.MainToolStrip.Location = new System.Drawing.Point(0, 0);
             this.MainToolStrip.Name = "MainToolStrip";
@@ -175,28 +175,30 @@
             this.MateriiButton.Text = "Materii";
             this.MateriiButton.Click += new System.EventHandler(this.MateriiButton_Click);
             // 
-            // toolStripButton1
+            // StudentiButton
             // 
-            this.toolStripButton1.CheckOnClick = true;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Font = new System.Drawing.Font("UT Sans Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(102, 41);
-            this.toolStripButton1.Text = "Studenți";
+            this.StudentiButton.CheckOnClick = true;
+            this.StudentiButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.StudentiButton.Font = new System.Drawing.Font("UT Sans Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentiButton.Image = ((System.Drawing.Image)(resources.GetObject("StudentiButton.Image")));
+            this.StudentiButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.StudentiButton.Name = "StudentiButton";
+            this.StudentiButton.Size = new System.Drawing.Size(102, 41);
+            this.StudentiButton.Text = "Studenți";
+            this.StudentiButton.Click += new System.EventHandler(this.StudentiButton_Click);
             // 
-            // toolStripButton6
+            // ProgrameButton
             // 
-            this.toolStripButton6.CheckOnClick = true;
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton6.Font = new System.Drawing.Font("UT Sans Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(116, 41);
-            this.toolStripButton6.Text = "Programe";
-            this.toolStripButton6.ToolTipText = "Programe";
+            this.ProgrameButton.CheckOnClick = true;
+            this.ProgrameButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ProgrameButton.Font = new System.Drawing.Font("UT Sans Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgrameButton.Image = ((System.Drawing.Image)(resources.GetObject("ProgrameButton.Image")));
+            this.ProgrameButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ProgrameButton.Name = "ProgrameButton";
+            this.ProgrameButton.Size = new System.Drawing.Size(116, 41);
+            this.ProgrameButton.Text = "Programe";
+            this.ProgrameButton.ToolTipText = "Programe";
+            this.ProgrameButton.Click += new System.EventHandler(this.ProgrameButton_Click);
             // 
             // Users
             // 
@@ -237,7 +239,7 @@
 
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.ToolStrip MainToolStrip;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton StudentiButton;
         private System.Windows.Forms.ToolStripButton MateriiButton;
         private System.Windows.Forms.ToolStripButton Users;
         private System.Windows.Forms.Panel panel1;
@@ -247,6 +249,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.Label AccesLevelLabel;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton ProgrameButton;
     }
 }
