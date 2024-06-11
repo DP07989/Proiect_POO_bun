@@ -40,7 +40,12 @@ namespace Proiect_POO_bun
 
         private void Users_Click(object sender, EventArgs e)
         {
-            SelectedTable = "users";
+            if (Globals.AccesLevel >= 3)
+                SelectedTable = "users";
+            else
+            {
+                MessageBox.Show("Trebuie să fiți administrator (Nivel de acces 3) pentru a modifica aceste date)", "No permission", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             MySqlConnection con = new MySqlConnection("server  = localhost; userid = root; password = ; database = poo");
             con.Open();
@@ -156,7 +161,13 @@ namespace Proiect_POO_bun
         private void MateriiButton_Click(object sender, EventArgs e)
         {
             SelectedTable = "materii";
-
+            if (Globals.AccesLevel >= 3)
+                SelectedTable = "users";
+            else
+            {
+                MessageBox.Show("Trebuie să fiți administrator (Nivel de acces 3) pentru a modifica aceste date)", "No permission", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             MySqlConnection con = new MySqlConnection("server  = localhost; userid = root; password = ; database = poo");
             con.Open();
@@ -180,6 +191,13 @@ namespace Proiect_POO_bun
 
         private void ProgrameButton_Click(object sender, EventArgs e)
         {
+            if (Globals.AccesLevel >= 3)
+                SelectedTable = "users";
+            else
+            {
+                MessageBox.Show("Trebuie să fiți administrator (Nivel de acces 3) pentru a modifica aceste date)", "No permission", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             SelectedTable = "programe";
 
 
@@ -204,6 +222,14 @@ namespace Proiect_POO_bun
 
         private void StudentiButton_Click(object sender, EventArgs e)
         {
+            if (Globals.AccesLevel >= 2)
+                SelectedTable = "users";
+            else
+            {
+                MessageBox.Show("Trebuie să fiți secretar (Nivel de acces 2) pentru a modifica aceste date)", "No permission", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             SelectedTable = "studenti";
 
 

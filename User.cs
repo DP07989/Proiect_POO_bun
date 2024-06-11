@@ -7,11 +7,8 @@ using MySql.Data.MySqlClient;
 
 namespace Proiect_POO_bun
 {
-    internal class User
+    public static class User
     {
-        User(String Name, String Password)
-        {
-            MySqlConnection con = new MySqlConnection("server  = localhost; userid = root; password = ; database = users");
-        }        
+       public static int AL = 0;
     }
 }
